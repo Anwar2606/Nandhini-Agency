@@ -26,12 +26,12 @@ const firebaseConfig = {
   // storageBucket: "billing-software2.appspot.com",
   // messagingSenderId: "97163152398",
   // appId: "1:97163152398:web:b02de4e1e085efbca9c05f"
-  apiKey: "AIzaSyDElnhUdDkx6gADzR9nHYTHopJtd0SwgCQ",
-  authDomain: "billing1-f7705.firebaseapp.com",
-  projectId: "billing1-f7705",
-  storageBucket: "billing1-f7705.firebasestorage.app",
-  messagingSenderId: "889910896481",
-  appId: "1:889910896481:web:116615b33b40b24f674720"
+ apiKey: "AIzaSyBf4slxeQECeCch8zvXrEqNAi3JtPp9v6s",
+  authDomain: "nandhini-agency.firebaseapp.com",
+  projectId: "nandhini-agency",
+  storageBucket: "nandhini-agency.firebasestorage.app",
+  messagingSenderId: "742779532605",
+  appId: "1:742779532605:web:961ad0f6638440dd43c154"
 };
 
 const app = initializeApp(firebaseConfig);

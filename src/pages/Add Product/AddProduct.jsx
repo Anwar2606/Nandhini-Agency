@@ -123,27 +123,27 @@ const AddProduct = () => {
               value={saleprice} 
               onChange={(e) => setSalePrice(e.target.value)} 
               placeholder="Sale Price" 
-              required 
+             
             />
             <input 
               type="number" 
               value={regularprice} 
               onChange={(e) => setRegularPrice(e.target.value)} 
               placeholder="Regular Price" 
-              required 
+               
             />
             <input 
               type="text" 
               value={quantity} 
               onChange={(e) => setQuantity(e.target.value)} 
-              placeholder="Quantity" 
-              required 
+              placeholder="Number of stocks" 
+            
             />
             <select 
               className="custom-select"
               value={inStock} 
               onChange={(e) => setInStock(e.target.value)} 
-              required
+             
             >
               <option value="" disabled>InStock</option>
               <option value="true">Yes</option>
@@ -154,7 +154,7 @@ const AddProduct = () => {
               className="custom-select"
               value={category} 
               onChange={(e) => setCategory(e.target.value)} 
-              required
+            
             >
               <option value="" disabled>Select Category</option>
               <option value="ONE SOUND">ONE SOUND</option>
