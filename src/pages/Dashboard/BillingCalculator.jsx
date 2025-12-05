@@ -415,9 +415,14 @@ const generatePDF = (copyType, invoiceNumber) => {
         doc.setTextColor(0, 0, 0);
    doc.setFont('helvetica', 'normal');
    doc.setFontSize(9);
-   const formattedDate = selectedDate.toLocaleDateString(); 
-   
-   doc.text(`Date: ${formattedDate}`, 138, 39);
+   const day = String(selectedDate.getDate()).padStart(2, "0");
+const month = String(selectedDate.getMonth() + 1).padStart(2, "0");
+const year = selectedDate.getFullYear();
+
+const formattedDate = `${day}/${month}/${year}`;
+
+doc.text(`Date: ${formattedDate}`, 138, 39);
+
    doc.setFont('helvetica', 'bold');
    doc.text('GSTIN: 33AAMFN7599K1ZF', 138, 45);
    

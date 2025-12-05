@@ -161,40 +161,59 @@ const ShowCustomers = () => {
               Add Customer
             </button>
           </div>
-          <table className="products-table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Address</th>
-                <th>State</th>
-                <th>Phone No</th>
-                <th>GSTIN</th>
-                <th>PAN</th>
-                <th>Email</th>
-              </tr>
-            </thead>
-            <tbody>
-              {customers.length > 0 ? (
-                customers.map((customer) => (
-                  <tr key={customer.id}>
-                    <td>{customer.customerName}</td>
-                    <td>{customer.customerAddress}</td>
-                    <td>{customer.customerState}</td>
-                    <td>{customer.customerPhoneNo}</td>
-                    <td>{customer.customerGSTIN}</td>
-                    <td>{customer.customerPan}</td>
-                    <td>{customer.customerEmail}</td>
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan="7" style={{ textAlign: "center" }}>
-                    No customer data available.
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+<table className="products-table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Address</th>
+      <th>State</th>
+      <th>Phone No</th>
+      <th>GSTIN</th>
+      <th>PAN</th>
+      <th>Email</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {customers.length > 0 ? (
+      customers.map((customer) => (
+        <tr key={customer.id}>
+          <td>{customer.customerName}</td>
+          <td>{customer.customerAddress}</td>
+          <td>{customer.customerState}</td>
+          <td>{customer.customerPhoneNo}</td>
+          <td>{customer.customerGSTIN}</td>
+          <td>{customer.customerPan}</td>
+          <td>{customer.customerEmail}</td>
+
+          {/* --- EDIT BUTTON --- */}
+          <td>
+            <button
+              onClick={() => navigate(`/editcustomer/${customer.id}`)}
+              style={{
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                fontSize: "20px",
+                color: "#1b2594",
+              }}
+            >
+              <FaEdit />
+            </button>
+          </td>
+        </tr>
+      ))
+    ) : (
+      <tr>
+        <td colSpan="8" style={{ textAlign: "center" }}>
+          No customer data available.
+        </td>
+      </tr>
+    )}
+  </tbody>
+</table>
+
         </div>
       </div>
     </div>

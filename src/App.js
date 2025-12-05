@@ -26,6 +26,7 @@ import ShowCustomers from './pages/Show Customers/ShowCustomers';
 import MergePDFs from './pages/Merge Pdf/MergePdf';
 import AddTransportDetails from './pages/Add Transport Details/AddTransportDetails';
 import ShowTransportDetails from './pages/ShowTransport/ShowTransportDetails';
+import EditCustomer from './pages/Edit Customer/EditCustomer';
 
 
 
@@ -79,6 +80,7 @@ const App = () => {
         <Route path="/addTransport" element={<AddTransportDetails />}/>
           <Route path="/add" element={<AddProduct />} />
           <Route path="/newhome" element={<NewHome />} />
+          <Route path="/editcustomer/:id" element={<EditCustomer />} />
           <Route path="/" element={<LoginPage />} />
           <Route path="/pdf" element={<MergePDFs />} />
           <Route path="/showtransport" element={<ShowTransportDetails />} />
